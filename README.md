@@ -9,10 +9,10 @@ Inspired by [id:hitode909 blog post](http://hitode909.hatenablog.com/entry/20100
 
 ### Manually install
 
-Put cd-gitroot and _cd-gitroot files somewhere in your $fpath and add the following line to your .zshrc:
+Put git-root and _git-root files somewhere in your $fpath and add the following line to your .zshrc:
 
 ```
-autoload -Uz cd-gitroot
+autoload -Uz git-root
 ```
 
 #### For example
@@ -28,7 +28,7 @@ And add the following lines to your .zshrc:
 ```
 fpath=(/path/to/dir/cd-gitroot(N-/) $fpath)
 
-autoload -Uz cd-gitroot
+autoload -Uz git-root
 ```
 
 ### Installing using Antigen
@@ -49,13 +49,13 @@ You can set alias to this function.
 e.g.
 
 ```
-alias cdu='cd-gitroot'
+alias cdu='git-root'
 ```
 
 ## Usage
 
 ```
-cd-gitroot [PATH]
+git-root [PATH]
 ```
 
 If PATH isn't specified, change directory to current git repository root directory.
@@ -64,4 +64,3 @@ PATH is treated relative path in git root directory.
 
 ## Options
 \-h display help and exit
-

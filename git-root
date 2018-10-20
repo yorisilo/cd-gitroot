@@ -7,19 +7,19 @@
 # URL : https://github.com/mollifier/cd-gitroot
 #
 # How to set up
-#   Put cd-gitroot and _cd-gitroot files somewhere in your $fpath
+#   Put git-root and _git-root files somewhere in your $fpath
 #   and add this line to your .zshrc:
 #
-#     autoload -Uz cd-gitroot
+#     autoload -Uz git-root
 #
 # Usage:
-#   cd-gitroot [PATH]
+#   git-root [PATH]
 #
 
 function cdgitroot_print_usage()
 {
     cat << EOF
-Usage: cd-gitroot [PATH]
+Usage: git-root [PATH]
 Change directory to current git repository root directory.
 If PATH is specified, change directory to PATH instead of it.
 PATH is treated relative path in git root directory.
@@ -30,7 +30,7 @@ EOF
 
 function cdgitroot_print_error()
 {
-    echo "cd-gitroot: $@" 1>&2
+    echo "git-root: $@" 1>&2
     echo "Try \`-h' option for more information." 1>&2
 }
 

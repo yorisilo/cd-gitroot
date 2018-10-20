@@ -19,14 +19,14 @@
 declare -a opts args
 args=(
   '-h[display this help and exit]'
-  '1:path:_cd-gitroot_path'
+  '1:path:_git-root_path'
 )
 local curcontext=$curcontext state line ret=1
 declare -A opt_args
 
 # show directories in git top level directory
-(( $+functions[_cd-gitroot_path] )) ||
-_cd-gitroot_path() {
+(( $+functions[_git-root_path] )) ||
+_git-root_path() {
   if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) != 'true' ]]; then
     return 1
   fi
@@ -47,4 +47,3 @@ return $ret
 # sh-basic-offset: 2
 # End:
 # vim: ft=zsh sw=2 ts=2 et
-
